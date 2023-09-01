@@ -30,23 +30,31 @@
 
 <p>Publishing the app to App Engine can either be done directly from Visual Studio, or using the Google Cloud CLI. For the Visual Studio method, you would have to install the Google Cloud Tools for Visual Studio extension (you will need this for the BigQuery step anyway). After installing this extension, make sure to restart Visual Studio for it to start working.</p>
 <p>This particular app was deployed through the gcloud CLI. In the terminal, first publish the app using the command: </p> 
+
 ```
 dotnet publish -c Release 
 ```
+
 <p>Then, navigate to the publish folder: </p>
+
 ```
 cd bin/Release/netcoreapp3.1/publish
 ```
+
 <p>Create an app.yaml file inside the publish folder:</p>
+
 ```
 env: flex
 runtime: aspnetcore
 ```
+
 <p>Note: To create this yaml file, you can use an online yaml tool, download it, and place it in the publish folder.</p>
 <p>Finally, deploy the app to App Engine flexible using the following command: </p>
+
 ```
 gcloud app deploy --version v0
 ```
+
 <p>Once the app is published, it can be accessed by clicking on the "default" service under the "Services" tab in App Engine on the GCP console. </p> 
 
 ![image](https://github.com/yena816/samplegcpcoreapp/assets/42750252/8f90adcd-6337-4090-a2d7-90dcfe1d5f0e) 
