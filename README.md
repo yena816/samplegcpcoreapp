@@ -28,9 +28,7 @@
 <h2>App Engine</h2>
 <p>The next step is to publish the app to GCP App Engine. Google Cloud Platform (GCP) App Engine is a Platform-as-a-Service (PaaS) offering provided by Google for building, deploying, and scaling applications. It allows developers to focus on writing code and building applications without worrying about the underlying infrastructure management. App Engine abstracts away many of the complexities of server provisioning, load balancing, and scaling, making it easier to develop and deploy web applications, APIs, and other services. The application code will be uploaded to App Engine, which will then deploy the code and the infrastructure will be maintained by GCP. App Engine is best for creating apps from scratch. If you are migrating an existing app to App Engine, you have to check if App Engine supports the language, OS dependencies, and architecture of your app. </p>
  
- ![image](https://github.com/yena816/samplegcpcoreapp/assets/42750252/ef3df057-7a9d-40ab-a922-d04b3b381c3b) 
-
-<h3>Best Practices of App Engine</h3>
+<h3>App Engine Best Practices</h3>
 
 <p>To ensure that your apps in App Engine run smoothly, there are a few best practices you can follow:</p>
 
@@ -43,52 +41,49 @@
 <h4>Use Managed Services</h4>
 <p>Leverage managed GCP services like Cloud SQL, Cloud Datastore, and Cloud Storage rather than managing your own database or storage solutions. This simplifies operations and provides scalability.</p>
 
-4. **Automatic Scaling:**
-   - Configure automatic scaling settings to ensure your application can handle varying levels of traffic. App Engine will automatically scale up or down based on demand.
+<h4>Leverage Automatic Scaling</h4>
+<p>Configure automatic scaling settings to ensure your application can handle varying levels of traffic. App Engine will automatically scale up or down based on demand.</p>
 
-5. **Versioning:**
-   - Use versioning to deploy and manage different versions of your application. This allows you to roll back to a previous version if needed and perform A/B testing.
+<h4>Utilize Versioning</h4>
+<p>Use versioning to deploy and manage different versions of your application. This allows you to roll back to a previous version if needed and perform A/B testing.</p>
 
-6. **Traffic Splitting:**
-   - When deploying new versions, use traffic splitting to gradually direct a portion of your users to the new version, reducing the risk of issues affecting all users at once.
+<h4>Implement Traffic Splitting</h4>
+<p>When deploying new versions, use traffic splitting to gradually direct a portion of your users to the new version, reducing the risk of issues affecting all users at once.</p>
 
-7. **Security:**
-   - Implement security best practices, such as regularly patching your dependencies, using HTTPS for data in transit, and following GCP's Identity and Access Management (IAM) for access control.
+<h4>Follow Security Best Practices</h4>
+<p>Implement security best practices, such as regularly patching your dependencies, using HTTPS for data in transit, and following GCP's Identity and Access Management (IAM) for access control.</p>
 
-8. **Monitoring and Logging:**
-   - Set up monitoring and logging using Google Cloud Monitoring and Google Cloud Logging to keep track of your application's performance and detect issues early.
+<h4>Leverage Monitoring and Logging</h4>
+<p>Set up monitoring and logging using Google Cloud Monitoring and Google Cloud Logging to keep track of your application's performance and detect issues early.</p>
 
-9. **Error Handling and Reporting:**
-   - Implement error handling and reporting mechanisms to help you identify and resolve issues quickly. Use tools like Stackdriver Error Reporting.
+<h4>Handle and Report Errors</h4>
+<p>Implement error handling and reporting mechanisms to help you identify and resolve issues quickly. Use tools like Stackdriver Error Reporting.</p>
 
-10. **Resource Management:**
-    - Optimize resource usage by adjusting instance classes, concurrency settings, and memory allocation based on your application's requirements. Use App Engine's built-in tools to analyze performance.
+<h4>Manage Resources</h4>
+<p>Optimize resource usage by adjusting instance classes, concurrency settings, and memory allocation based on your application's requirements. Use App Engine's built-in tools to analyze performance.</p>
 
-11. **Cost Optimization:**
-    - Keep an eye on your resource usage and costs. App Engine provides tools to help you understand and optimize your spending. Set budgets and alerts for cost control.
+<h4>Optimize Costs</h4>
+<p>Keep an eye on your resource usage and costs. App Engine provides tools to help you understand and optimize your spending. Set budgets and alerts for cost control.</p>
 
-12. **CI/CD Pipeline:**
-    - Implement a continuous integration and continuous deployment (CI/CD) pipeline to automate testing and deployment processes. Tools like Cloud Build can be integrated for this purpose.
+<h4>Use a CI/CD Pipeline</h4>
+<p>Implement a continuous integration and continuous deployment (CI/CD) pipeline to automate testing and deployment processes. Tools like Cloud Build can be integrated for this purpose.</p>
 
-13. **Version Cleanup:**
-    - Regularly clean up old and unused versions of your application to reduce storage costs and complexity.
+<h4>Clean Up Versions</h4>
+<p>Regularly clean up old and unused versions of your application to reduce storage costs and complexity.</p>
 
-14. **Documentation:**
-    - Maintain comprehensive documentation for your application, including architecture, deployment procedures, and troubleshooting guides.
+<h4>Maintain Documentation</h4>
+<p>Maintain comprehensive documentation for your application, including architecture, deployment procedures, and troubleshooting guides.</p>
 
-15. **Backup and Disaster Recovery:**
-    - Implement backup and disaster recovery plans to ensure data resilience. This is especially important for mission-critical applications.
+<h4>Apply Backup and Disaster Recovery</h4>
+<p>Implement backup and disaster recovery plans to ensure data resilience. This is especially important for mission-critical applications.</p>
 
-16. **Compliance and Regulations:**
-    - Ensure your application complies with relevant regulations and security standards. GCP provides resources and services to assist with this.
+<h4>Maintain Compliance and Regulations</h4>
+<p>Ensure your application complies with relevant regulations and security standards. GCP provides resources and services to assist with this.</p>
 
-17. **Performance Optimization:**
-    - Continuously optimize your application for performance. Use profiling tools and performance testing to identify bottlenecks and improve response times.
+<h4>Optimize Performance</h4>
+<p>Continuously optimize your application for performance. Use profiling tools and performance testing to identify bottlenecks and improve response times.</p>
 
-18. **Community and Support:**
-    - Join the GCP community and seek support when needed. Google Cloud offers various support plans, including free community support and paid support options.
-
-<p>By following these best practices, you can build, deploy, and maintain robust and cost-effective applications on Google Cloud Platform's App Engine. Keep in mind that specific requirements may vary depending on your application's complexity and use case. Regularly review and update your practices to align with evolving technologies and business needs.</p>
+<h3>Steps to Publish App</h3>
 
 <p>Publishing the app to App Engine can either be done directly from Visual Studio, or using the Google Cloud CLI. For the Visual Studio method, you would have to install the Google Cloud Tools for Visual Studio extension (you will need this for the BigQuery step anyway). After installing this extension, make sure to restart Visual Studio for it to start working.</p>
 <p>This particular app was deployed through the gcloud CLI. In the terminal, first publish the app using the command: </p> 
@@ -124,7 +119,70 @@ gcloud app deploy --version v0
 
 <h2>BigQuery</h2>
 
-<p>The next step is to create the BigQuery database and connect it to the app. BigQuery is a fully managed, serverless, and highly scalable cloud data warehouse and analytics platform. It is designed to handle large volumes of data and enable organizations to perform fast and complex queries on that data using a SQL-like query language, making it a powerful tool for data analysis and business intelligence. With a few simple clicks, you can create a data source, a dataset within that data source, and a table within that dataset called "contacts".  </p>
+<p>The next step is to create the BigQuery database and connect it to the app. BigQuery is a fully managed, serverless, and highly scalable cloud data warehouse and analytics platform. It is designed to handle large volumes of data and enable organizations to perform fast and complex queries on that data using a SQL-like query language, making it a powerful tool for data analysis and business intelligence. </p> 
+
+<h3>BigQuery Best Practices</h3>
+
+<h4>Design Schema</h4>
+<p>Use a schema that minimizes the need for joins. Denormalize your data where it makes sense to reduce query complexity and improve performance.</p>
+Partitioning and Clustering:
+
+Partition your tables by date or another relevant column to speed up query performance by scanning only necessary data. Consider clustering tables based on frequently filtered columns.
+Use of Standard SQL:
+
+Write SQL queries using standard SQL syntax, as it's more powerful and flexible than legacy SQL. It's also compatible with other SQL-based tools and databases.
+Table and Data Optimization:
+
+Avoid creating very wide tables with too many columns. Only select and store the columns you need.
+Remove duplicates from your data to reduce storage costs.
+Compress your data where possible to save on storage costs.
+Streaming Data:
+
+Use BigQuery Streaming for real-time data ingestion, but be mindful of streaming costs and consider using batch loading for less time-sensitive data.
+Query Optimization:
+
+Write efficient queries that only select the columns and rows needed for analysis.
+Use the EXPLAIN statement to understand how queries are executed and identify potential optimizations.
+Use the ARRAY data type for repeated data when appropriate to simplify queries.
+Use of Wildcards:
+
+Be cautious when using wildcard table references (e.g., *) in queries, as they can lead to inefficient query execution. Limit their use when possible.
+Optimize Joins:
+
+Minimize the use of joins, especially on large tables. Use denormalization, nested and repeated fields, and nested queries to reduce the need for joins.
+Cost Management:
+
+Set up budget alerts to monitor and control your BigQuery costs.
+Use cost-effective storage options like long-term storage for historical data.
+Experiment with different query options and use the query cost estimator to optimize query costs.
+Concurrency Control:
+
+Adjust concurrency settings to match your workload. Over-provisioning can lead to higher costs, while under-provisioning can lead to query delays.
+Data Access Control:
+
+Implement proper access controls using Google Cloud Identity and Access Management (IAM) to restrict who can access and modify your data and queries.
+Data Lifecycle Management:
+
+Define and implement data retention policies to automatically delete or archive data that is no longer needed.
+Error Handling and Monitoring:
+
+Set up error handling and monitoring to track query errors, job failures, and long-running queries. Use Stackdriver for monitoring and alerts.
+Documentation and Naming Conventions:
+
+Maintain comprehensive documentation for your datasets, tables, and queries. Follow consistent naming conventions to make it easier to manage and collaborate on projects.
+Performance Optimization:
+
+Regularly analyze and optimize your data and queries for performance. Tools like BigQuery's Query Optimization tool can help.
+Training and Collaboration:
+
+Ensure your team is trained in BigQuery best practices and encourages collaboration among data engineers, analysts, and data scientists.
+Backup and Disaster Recovery:
+
+Implement backup and recovery strategies for critical data to prevent data loss in case of unexpected incidents.
+
+<h3>Steps to Implement BigQuery</h3>
+
+<p>With a few simple clicks, you can create a data source, a dataset within that data source, and a table within that dataset called "contacts".  </p>
 
  ![image](https://github.com/yena816/samplegcpcoreapp/assets/42750252/ce9a444a-f40d-429c-8a9c-2a91c5019401) 
  
