@@ -125,60 +125,55 @@ gcloud app deploy --version v0
 
 <h4>Design Schema</h4>
 <p>Use a schema that minimizes the need for joins. Denormalize your data where it makes sense to reduce query complexity and improve performance.</p>
-Partitioning and Clustering:
 
-Partition your tables by date or another relevant column to speed up query performance by scanning only necessary data. Consider clustering tables based on frequently filtered columns.
-Use of Standard SQL:
+<h4>Implement Partitioning and Clustering</h4>
+<p>Partition your tables by date or another relevant column to speed up query performance by scanning only necessary data. Consider clustering tables based on frequently filtered columns.</p>
 
-Write SQL queries using standard SQL syntax, as it's more powerful and flexible than legacy SQL. It's also compatible with other SQL-based tools and databases.
-Table and Data Optimization:
+<h4>Use Standard SQL</h4>
+<p>Write SQL queries using standard SQL syntax, as it's more powerful and flexible than legacy SQL. It's also compatible with other SQL-based tools and databases.</p>
 
-Avoid creating very wide tables with too many columns. Only select and store the columns you need.
+<h4>Optimize Tables and Data</h4>
+<p>Avoid creating very wide tables with too many columns. Only select and store the columns you need.
 Remove duplicates from your data to reduce storage costs.
-Compress your data where possible to save on storage costs.
-Streaming Data:
+Compress your data where possible to save on storage costs.</p>
 
-Use BigQuery Streaming for real-time data ingestion, but be mindful of streaming costs and consider using batch loading for less time-sensitive data.
-Query Optimization:
-
-Write efficient queries that only select the columns and rows needed for analysis.
+<h4>Optimize Queries</h4>
+<p>Write efficient queries that only select the columns and rows needed for analysis.
 Use the EXPLAIN statement to understand how queries are executed and identify potential optimizations.
-Use the ARRAY data type for repeated data when appropriate to simplify queries.
-Use of Wildcards:
+Use the ARRAY data type for repeated data when appropriate to simplify queries.</p>
 
-Be cautious when using wildcard table references (e.g., *) in queries, as they can lead to inefficient query execution. Limit their use when possible.
-Optimize Joins:
+<h4>Limit Wildcards</h4>
+<p>Be cautious when using wildcard table references (e.g., *) in queries, as they can lead to inefficient query execution. Limit their use when possible.</p>
 
-Minimize the use of joins, especially on large tables. Use denormalization, nested and repeated fields, and nested queries to reduce the need for joins.
-Cost Management:
+<h4>Optimize Joins</h4>
+<p>Minimize the use of joins, especially on large tables. Use denormalization, nested and repeated fields, and nested queries to reduce the need for joins.</p>
 
-Set up budget alerts to monitor and control your BigQuery costs.
+<h4>Manage Cost</h4>
+<p>Set up budget alerts to monitor and control your BigQuery costs.
 Use cost-effective storage options like long-term storage for historical data.
-Experiment with different query options and use the query cost estimator to optimize query costs.
-Concurrency Control:
+Experiment with different query options and use the query cost estimator to optimize query costs.</p>
 
-Adjust concurrency settings to match your workload. Over-provisioning can lead to higher costs, while under-provisioning can lead to query delays.
-Data Access Control:
+<h4>Control Concurrency</h4>
+<p>Adjust concurrency settings to match your workload. Over-provisioning can lead to higher costs, while under-provisioning can lead to query delays.</p>
 
-Implement proper access controls using Google Cloud Identity and Access Management (IAM) to restrict who can access and modify your data and queries.
-Data Lifecycle Management:
+<h4>Control Data Access</h4>
+<p>Implement proper access controls using Google Cloud Identity and Access Management (IAM) to restrict who can access and modify your data and queries.</p>
 
-Define and implement data retention policies to automatically delete or archive data that is no longer needed.
-Error Handling and Monitoring:
+<h4>Manage Data Lifecycle</h4>
+<p>Define and implement data retention policies to automatically delete or archive data that is no longer needed.</p>
 
-Set up error handling and monitoring to track query errors, job failures, and long-running queries. Use Stackdriver for monitoring and alerts.
-Documentation and Naming Conventions:
+<h4>Handle and Monitor Errors</h4>
+<p>Set up error handling and monitoring to track query errors, job failures, and long-running queries. Use Stackdriver for monitoring and alerts.</p>
 
-Maintain comprehensive documentation for your datasets, tables, and queries. Follow consistent naming conventions to make it easier to manage and collaborate on projects.
-Performance Optimization:
+<h4>Maintain Documentation and Naming Conventions</h4>
+<p>Maintain comprehensive documentation for your datasets, tables, and queries. Follow consistent naming conventions to make it easier to manage and collaborate on projects.</p>
 
-Regularly analyze and optimize your data and queries for performance. Tools like BigQuery's Query Optimization tool can help.
-Training and Collaboration:
+<h4>Optimize Performance</h4>
+<p>Regularly analyze and optimize your data and queries for performance. Tools like BigQuery's Query Optimization tool can help.</p>
 
-Ensure your team is trained in BigQuery best practices and encourages collaboration among data engineers, analysts, and data scientists.
-Backup and Disaster Recovery:
+<h4>Apply Backup and Disaster Recovery</h4>
+<p>Implement backup and recovery strategies for critical data to prevent data loss in case of unexpected incidents.</p>
 
-Implement backup and recovery strategies for critical data to prevent data loss in case of unexpected incidents.
 
 <h3>Steps to Implement BigQuery</h3>
 
