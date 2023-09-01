@@ -26,7 +26,69 @@
 <p>At this point, the page has no interaction with the cloud. That will be the next step outlined in the next section. </p>
 
 <h2>App Engine</h2>
-<p>The next step is to publish the app to GCP App Engine. Google Cloud Platform (GCP) App Engine is a Platform-as-a-Service (PaaS) offering provided by Google for building, deploying, and scaling applications. It allows developers to focus on writing code and building applications without worrying about the underlying infrastructure management. App Engine abstracts away many of the complexities of server provisioning, load balancing, and scaling, making it easier to develop and deploy web applications, APIs, and other services. The application code will be uploaded to App Engine, which will then deploy the code and the infrastructure will be maintained by GCP. </p>
+<p>The next step is to publish the app to GCP App Engine. Google Cloud Platform (GCP) App Engine is a Platform-as-a-Service (PaaS) offering provided by Google for building, deploying, and scaling applications. It allows developers to focus on writing code and building applications without worrying about the underlying infrastructure management. App Engine abstracts away many of the complexities of server provisioning, load balancing, and scaling, making it easier to develop and deploy web applications, APIs, and other services. The application code will be uploaded to App Engine, which will then deploy the code and the infrastructure will be maintained by GCP. App Engine is best for creating apps from scratch. If you are migrating an existing app to App Engine, you have to check if App Engine supports the language, OS dependencies, and architecture of your app. </p>
+ 
+ ![image](https://github.com/yena816/samplegcpcoreapp/assets/42750252/ef3df057-7a9d-40ab-a922-d04b3b381c3b) 
+
+<h3>Best Practices of App Engine</h3>
+
+<p>To ensure that your apps in App Engine run smoothly, there are a few best practices you can follow:</p>
+
+<h4>Choose the Right Environment </h4> 
+<p>App Engine offers two environments: Standard and Flexible. Choose the environment that best fits your application's needs. Standard is more opinionated and auto-scales quickly, while Flexible allows more customization.</p>
+
+<h4>Select the Appropriate Language and Runtime</h4>
+<p>Choose the programming language and runtime that aligns with your project requirements. App Engine supports multiple languages and runtimes, including Python, Java, Go, Node.js, and others.</p>
+
+<h4>Use Managed Services</h4>
+<p>Leverage managed GCP services like Cloud SQL, Cloud Datastore, and Cloud Storage rather than managing your own database or storage solutions. This simplifies operations and provides scalability.</p>
+
+4. **Automatic Scaling:**
+   - Configure automatic scaling settings to ensure your application can handle varying levels of traffic. App Engine will automatically scale up or down based on demand.
+
+5. **Versioning:**
+   - Use versioning to deploy and manage different versions of your application. This allows you to roll back to a previous version if needed and perform A/B testing.
+
+6. **Traffic Splitting:**
+   - When deploying new versions, use traffic splitting to gradually direct a portion of your users to the new version, reducing the risk of issues affecting all users at once.
+
+7. **Security:**
+   - Implement security best practices, such as regularly patching your dependencies, using HTTPS for data in transit, and following GCP's Identity and Access Management (IAM) for access control.
+
+8. **Monitoring and Logging:**
+   - Set up monitoring and logging using Google Cloud Monitoring and Google Cloud Logging to keep track of your application's performance and detect issues early.
+
+9. **Error Handling and Reporting:**
+   - Implement error handling and reporting mechanisms to help you identify and resolve issues quickly. Use tools like Stackdriver Error Reporting.
+
+10. **Resource Management:**
+    - Optimize resource usage by adjusting instance classes, concurrency settings, and memory allocation based on your application's requirements. Use App Engine's built-in tools to analyze performance.
+
+11. **Cost Optimization:**
+    - Keep an eye on your resource usage and costs. App Engine provides tools to help you understand and optimize your spending. Set budgets and alerts for cost control.
+
+12. **CI/CD Pipeline:**
+    - Implement a continuous integration and continuous deployment (CI/CD) pipeline to automate testing and deployment processes. Tools like Cloud Build can be integrated for this purpose.
+
+13. **Version Cleanup:**
+    - Regularly clean up old and unused versions of your application to reduce storage costs and complexity.
+
+14. **Documentation:**
+    - Maintain comprehensive documentation for your application, including architecture, deployment procedures, and troubleshooting guides.
+
+15. **Backup and Disaster Recovery:**
+    - Implement backup and disaster recovery plans to ensure data resilience. This is especially important for mission-critical applications.
+
+16. **Compliance and Regulations:**
+    - Ensure your application complies with relevant regulations and security standards. GCP provides resources and services to assist with this.
+
+17. **Performance Optimization:**
+    - Continuously optimize your application for performance. Use profiling tools and performance testing to identify bottlenecks and improve response times.
+
+18. **Community and Support:**
+    - Join the GCP community and seek support when needed. Google Cloud offers various support plans, including free community support and paid support options.
+
+<p>By following these best practices, you can build, deploy, and maintain robust and cost-effective applications on Google Cloud Platform's App Engine. Keep in mind that specific requirements may vary depending on your application's complexity and use case. Regularly review and update your practices to align with evolving technologies and business needs.</p>
 
 <p>Publishing the app to App Engine can either be done directly from Visual Studio, or using the Google Cloud CLI. For the Visual Studio method, you would have to install the Google Cloud Tools for Visual Studio extension (you will need this for the BigQuery step anyway). After installing this extension, make sure to restart Visual Studio for it to start working.</p>
 <p>This particular app was deployed through the gcloud CLI. In the terminal, first publish the app using the command: </p> 
