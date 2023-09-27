@@ -130,7 +130,23 @@ Experiment with different query options and use the query cost estimator to opti
 
 <p>Dataflow is a service in GCP that offers unified stream and batch data processing that's serverless, fast, and cost-effective. It includes real-time insights and activation with data streaming and machine learning, automated provisioning and management of processing resources, horizontal and vertical autoscaling of worker resources to maximize resource utilization, and OSS community-driven innovation with Apache Beam SDK.</p>
 
-<p>Dataflow executes data processing pipelines. Pipelines execute a sequence of steps that reads, transforms, and writes data. </p>
+<p>Dataflow executes data processing pipelines. Pipelines execute a sequence of steps that reads, transforms, and writes data. Dataflow, being tailored for handling extensive datasets, distributes the processing responsibilities among multiple virtual machines within a cluster. This enables them to concurrently process distinct portions of the data.</p>
+
+<p>There are a few reasons to choose to use Dataflow as your big data processing engine. First, it is essentially serverless, so you do not have to manage the compute resources yourself. Dataflow automatically spins up and down clusters of virtual machines when you run processing jobs. Your focus would be on writing the code instead of building the clusters. Also, Dataflow was designed to process data in both batch and streaming modes with the same programming model. Other big data SDKs typically require that you use different code depending on whether the data comes in batch or streaming form.</p>
+
+<h3>Dataflow Best Practices</h3>
+
+<p>The following are best practices for Dataflow:</p>
+
+<ul>
+ <li>Include external code in your pipeline</li>
+ <li>Run the external code</li>
+ <li>Design processing for small CPU cycles</li>
+ <li>Limit worker parallelism</li>
+ <li>Use high-capacity data sinks in Google Cloud</li>
+ <li>Manage segfaults</li>
+ </ul>
+
 
 <h2>PubSub</h2>
 
