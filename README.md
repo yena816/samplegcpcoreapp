@@ -85,10 +85,29 @@
  </ul>
 
 
-<h2>PubSub</h2>
+<h2>Pub/Sub</h2>
+
+<p>Pub/Sub is a scalable message queuing service that works as a messaging middleware for traditional service integration or a simple communication medium for modern microservices. It allows you to ingest events for streaming into BigQuery, data lakes or operational databases. Some features of Pub/Sub include ingesting analytic events and streaming them to BigQuery with Dataflow, in-order and any-order at-least-once message delivery with pull and push modes, and securing data with fine-grained access controls and always-on encryption. Cloud Pub/Sub is built for communication between different applications or services. It's really designed for keeping track of a lot of different changes, and then communicating those updates with different systems.  </p>
+
+<h3>Pub/Sub Best Practices</h3>
+
+<p>The following are best practices for Pub/Sub: </p>
+
+<ul>
+ <li>Attach a subscription or enable topic retention before you begin to publish</li>
+ <li>Configure batch messaging </li>
+ <li>Configure flow control for transient message spikes </li>
+ <li>Understand your network bandwidth and latency </li>
+ <li>Tweak the retry request variables for failed publishes </li>
+ <li>Use message storage policy to ensure data locality </li>
+ <li>Use a regional endpoint when using ordering keys in publishing </li>
+</ul>
 
 
+<h2>AI/ML</h2>
 
+
+<h2>Looker</h2>
 
 
 <h1>Process</h1>
