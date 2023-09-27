@@ -127,7 +127,9 @@ Experiment with different query options and use the query cost estimator to opti
 
 
 <h2>Dataflow</h2>
+
 <p>Dataflow is a service in GCP that offers unified stream and batch data processing that's serverless, fast, and cost-effective. It includes real-time insights and activation with data streaming and machine learning, automated provisioning and management of processing resources, horizontal and vertical autoscaling of worker resources to maximize resource utilization, and OSS community-driven innovation with Apache Beam SDK.</p>
+
 <p>Dataflow executes data processing pipelines. Pipelines execute a sequence of steps that reads, transforms, and writes data. </p>
 
 <h2>PubSub</h2>
