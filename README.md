@@ -106,6 +106,44 @@
 
 <h2>AI/ML</h2>
 
+<p>GCP has many AI and ML services available. The table below lists these services: </p>
+
+<table>
+ <tr>
+  <th>Use Case</th>
+  <th>Service</th>
+ </tr>
+ <tr>
+  <td>Generative AI</td>
+  <td>Generative AI on Vertex AI</td>
+ </tr>
+ <tr>
+  <td>Generative AI</td>
+  <td>Vertex AI Search and Conversation</td>
+ </tr>
+ <tr>
+  <td>Generative AI</td>
+  <td>Generative AI Document Summarization</td>
+ </tr>
+ <tr>
+  <td>Machine learning and MLOPs</td>
+  <td>Vertex AI Platform</td>
+ </tr>
+ <tr>
+  <td>Machine learning and MLOPs</td>
+  <td>Vertex AI Notebooks</td>
+ </tr>
+ <tr>
+  <td>Machine learning and MLOPs</td>
+  <td>AutoML</td>
+ </tr>
+ <tr>
+  <td>Speech, text, and language APIs</td>
+  <td>Natural Language AI</td>
+ </tr>
+</table>
+
+
 
 <h2>Looker</h2>
 
