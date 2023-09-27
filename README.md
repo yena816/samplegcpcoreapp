@@ -18,112 +18,49 @@
 
 <p>To ensure that your apps in App Engine run smoothly, there are a few best practices you can follow:</p>
 
-<h4>Choose the Right Environment </h4> 
-<p>App Engine offers two environments: Standard and Flexible. Choose the environment that best fits your application's needs. Standard is more opinionated and auto-scales quickly, while Flexible allows more customization.</p>
+<ul>
+ <li>Choose the right environment: Standard or Flexible </li>
+ <li>Select the appropriate language and runtime</li>
+ <li>Use managed services (Cloud SQL, Datastore, Cloud Storage, etc.) </li>
+ <li>Leverage automatic scaling</li>
+ <li>Utilize versioning </li>
+ <li>Implement traffic splitting when deploying new versions </li>
+ <li>Follow security best practices </li>
+ <li>Leverage monitoring and logging </li>
+ <li>Handle and report errors </li>
+ <li>Optimize costs by using App Engine's provided tools</li>
+ <li>Use a CI/CD pipeline </li>
+ <li>Clean up old and unused versions </li>
+ <li>Maintain comprehensive documentation </li>
+ <li>Apply backup and disaster recovery plans </li>
+ <li>Maintain compliance and regulations </li>
+ <li>Optimize your application for performance </li>
+</ul> 
 
-<h4>Select the Appropriate Language and Runtime</h4>
-<p>Choose the programming language and runtime that aligns with your project requirements. App Engine supports multiple languages and runtimes, including Python, Java, Go, Node.js, and others.</p>
-
-<h4>Use Managed Services</h4>
-<p>Leverage managed GCP services like Cloud SQL, Cloud Datastore, and Cloud Storage rather than managing your own database or storage solutions. This simplifies operations and provides scalability.</p>
-
-<h4>Leverage Automatic Scaling</h4>
-<p>Configure automatic scaling settings to ensure your application can handle varying levels of traffic. App Engine will automatically scale up or down based on demand.</p>
-
-<h4>Utilize Versioning</h4>
-<p>Use versioning to deploy and manage different versions of your application. This allows you to roll back to a previous version if needed and perform A/B testing.</p>
-
-<h4>Implement Traffic Splitting</h4>
-<p>When deploying new versions, use traffic splitting to gradually direct a portion of your users to the new version, reducing the risk of issues affecting all users at once.</p>
-
-<h4>Follow Security Best Practices</h4>
-<p>Implement security best practices, such as regularly patching your dependencies, using HTTPS for data in transit, and following GCP's Identity and Access Management (IAM) for access control.</p>
-
-<h4>Leverage Monitoring and Logging</h4>
-<p>Set up monitoring and logging using Google Cloud Monitoring and Google Cloud Logging to keep track of your application's performance and detect issues early.</p>
-
-<h4>Handle and Report Errors</h4>
-<p>Implement error handling and reporting mechanisms to help you identify and resolve issues quickly. Use tools like Stackdriver Error Reporting.</p>
-
-<h4>Manage Resources</h4>
-<p>Optimize resource usage by adjusting instance classes, concurrency settings, and memory allocation based on your application's requirements. Use App Engine's built-in tools to analyze performance.</p>
-
-<h4>Optimize Costs</h4>
-<p>Keep an eye on your resource usage and costs. App Engine provides tools to help you understand and optimize your spending. Set budgets and alerts for cost control.</p>
-
-<h4>Use a CI/CD Pipeline</h4>
-<p>Implement a continuous integration and continuous deployment (CI/CD) pipeline to automate testing and deployment processes. Tools like Cloud Build can be integrated for this purpose.</p>
-
-<h4>Clean Up Versions</h4>
-<p>Regularly clean up old and unused versions of your application to reduce storage costs and complexity.</p>
-
-<h4>Maintain Documentation</h4>
-<p>Maintain comprehensive documentation for your application, including architecture, deployment procedures, and troubleshooting guides.</p>
-
-<h4>Apply Backup and Disaster Recovery</h4>
-<p>Implement backup and disaster recovery plans to ensure data resilience. This is especially important for mission-critical applications.</p>
-
-<h4>Maintain Compliance and Regulations</h4>
-<p>Ensure your application complies with relevant regulations and security standards. GCP provides resources and services to assist with this.</p>
-
-<h4>Optimize Performance</h4>
-<p>Continuously optimize your application for performance. Use profiling tools and performance testing to identify bottlenecks and improve response times.</p>
 
 
 <h2>BigQuery</h2>
+
 <p>BigQuery is a fully managed, serverless, and highly scalable cloud data warehouse and analytics platform. It is designed to handle large volumes of data and enable organizations to perform fast and complex queries on that data using a SQL-like query language, making it a powerful tool for data analysis and business intelligence.</p>
+
 <h3>BigQuery Best Practices</h3>
 
-<h4>Design Schema</h4>
-<p>Use a schema that minimizes the need for joins. Denormalize your data where it makes sense to reduce query complexity and improve performance.</p>
-
-<h4>Implement Partitioning and Clustering</h4>
-<p>Partition your tables by date or another relevant column to speed up query performance by scanning only necessary data. Consider clustering tables based on frequently filtered columns.</p>
-
-<h4>Use Standard SQL</h4>
-<p>Write SQL queries using standard SQL syntax, as it's more powerful and flexible than legacy SQL. It's also compatible with other SQL-based tools and databases.</p>
-
-<h4>Optimize Tables and Data</h4>
-<p>Avoid creating very wide tables with too many columns. Only select and store the columns you need.
-Remove duplicates from your data to reduce storage costs.
-Compress your data where possible to save on storage costs.</p>
-
-<h4>Optimize Queries</h4>
-<p>Write efficient queries that only select the columns and rows needed for analysis.
-Use the EXPLAIN statement to understand how queries are executed and identify potential optimizations.
-Use the ARRAY data type for repeated data when appropriate to simplify queries.</p>
-
-<h4>Limit Wildcards</h4>
-<p>Be cautious when using wildcard table references (e.g., *) in queries, as they can lead to inefficient query execution. Limit their use when possible.</p>
-
-<h4>Optimize Joins</h4>
-<p>Minimize the use of joins, especially on large tables. Use denormalization, nested and repeated fields, and nested queries to reduce the need for joins.</p>
-
-<h4>Manage Cost</h4>
-<p>Set up budget alerts to monitor and control your BigQuery costs.
-Use cost-effective storage options like long-term storage for historical data.
-Experiment with different query options and use the query cost estimator to optimize query costs.</p>
-
-<h4>Control Concurrency</h4>
-<p>Adjust concurrency settings to match your workload. Over-provisioning can lead to higher costs, while under-provisioning can lead to query delays.</p>
-
-<h4>Control Data Access</h4>
-<p>Implement proper access controls using Google Cloud Identity and Access Management (IAM) to restrict who can access and modify your data and queries.</p>
-
-<h4>Manage Data Lifecycle</h4>
-<p>Define and implement data retention policies to automatically delete or archive data that is no longer needed.</p>
-
-<h4>Handle and Monitor Errors</h4>
-<p>Set up error handling and monitoring to track query errors, job failures, and long-running queries. Use Stackdriver for monitoring and alerts.</p>
-
-<h4>Maintain Documentation and Naming Conventions</h4>
-<p>Maintain comprehensive documentation for your datasets, tables, and queries. Follow consistent naming conventions to make it easier to manage and collaborate on projects.</p>
-
-<h4>Optimize Performance</h4>
-<p>Regularly analyze and optimize your data and queries for performance. Tools like BigQuery's Query Optimization tool can help.</p>
-
-<h4>Apply Backup and Disaster Recovery</h4>
-<p>Implement backup and recovery strategies for critical data to prevent data loss in case of unexpected incidents.</p>
+<ul>
+ <li>Use a schema that minimizes joins </li>
+ <li>Implement partitioning and clustering for your tables </li>
+ <li>Remove duplicate or unnecessary data</li>
+ <li>Avoid creating tables with too many columns </li>
+ <li>Write efficient queries </li>
+ <li>Limit wildcards in queries </li>
+ <li>Set up budget alerts to monitor and control costs </li>
+ <li>Control concurrency </li>
+ <li>Control access to your data and queries </li>
+ <li>Manage data lifecycle by using data retention policies </li>
+ <li>Handle and monitor errors </li>
+ <li>Maintain documentation and naming conventions </li>
+ <li>Regularly analyze and optimize your data/queries for performance </li>
+ <li>Apply backup and disaster recovery strategies </li>
+</ul>
 
 
 <h2>Dataflow</h2>
