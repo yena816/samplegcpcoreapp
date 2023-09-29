@@ -186,39 +186,61 @@
  <li>Machine learning environment setup 
   <ul>
    <li>Use Vertex AI Workbench notebooks for experimentation and development</li>
+   <li>Create a notebook instance for each team member </li>
+   <li>Store your ML resources and artifacts based on your corporate policy </li>
+   <li>Use Vertex AI SDK for Python </li>
   </ul>
- <li>Create a notebook instance for each team member </li>
- <li>Store your ML resources and artifacts based on your corporate policy </li>
- <li>Use Vertex AI SDK for Python </li>
- <li>Prepare training data</li>
- <li>Store structured and semi-structured data in BigQuery </li>
- <li>Store image, video, audio and unstructured data on Cloud Storage </li>
- <li>Use Vertex AI Data Labeling for unstructured data </li>
- <li>Use Vertex AI Feature Store with structured data </li>
- <li>Avoid storing data in block storage </li>
- <li>Use Vertex AI TensorBoard and Vertex AI Experiments for analyzing experiments </li>
- <li>Train a model within a notebook instance for small datasets </li>
- <li>Maximize your model's predictive accuracy with hyperparameter tuning </li>
- <li>Use a notebook instance to understand your models </li>
- <li>Use feature attributions to gain insights into model predictions</li>
- <li>Use BigQuery to process tabular data </li>
- <li>Use Dataflow to process data </li>
- <li>Use Dataproc for serverless Spark data processing. Use managed datasets with Vertex ML Metadata </li>
- <li>Run your code in a managed service </li>
- <li>Operationalize job execution with training pipelines </li>
- <li>Use training checkpoints to save the current state of your experiment </li>
- <li>Prepare model artifacts for serving in Cloud Storage </li>
- <li>Regularly compute new feature values </li>
- <li>Specify the number and types of machines you need </li>
- <li>Plan inputs to the model </li>
- <li>Turn on automatic scaling </li>
- <li>Use Vertex AI Pipelines to orchestrate the ML workflow </li>
- <li>Use Kubeflow Pipelines for flexible pipeline construction </li>
- <li>Organize your ML model artifacts </li>
- <li>Use a source control repository for pipeline definitions and training code</li>
- <li>Use skew and drift detection </li>
- <li>Fine tune alert thresholds </li>
- <li>Use feature attributions to detect data drift or skew</li>
+ <li>Machine learning development
+  <ul>
+   <li>Prepare training data</li>
+   <li>Store structured and semi-structured data in BigQuery </li>
+   <li>Store image, video, audio and unstructured data on Cloud Storage </li>
+   <li>Use Vertex AI Data Labeling for unstructured data </li>
+   <li>Use Vertex AI Feature Store with structured data </li>
+   <li>Avoid storing data in block storage </li>
+   <li>Use Vertex AI TensorBoard and Vertex AI Experiments for analyzing experiments </li>
+   <li>Train a model within a notebook instance for small datasets </li>
+   <li>Maximize your model's predictive accuracy with hyperparameter tuning </li>
+   <li>Use a notebook instance to understand your models </li>
+   <li>Use feature attributions to gain insights into model predictions</li>
+  </ul>
+ <li>Data processing
+  <ul>
+   <li>Use BigQuery to process tabular data </li>
+   <li>Use Dataflow to process data </li>
+   <li>Use Dataproc for serverless Spark data processing </li>
+   <li>Use managed datasets with Vertex ML Metadata </li>
+  </ul>
+ <li>Operationalized training
+  <ul>
+   <li>Run your code in a managed service </li>
+   <li>Operationalize job execution with training pipelines </li>
+   <li>Use training checkpoints to save the current state of your experiment </li>
+   <li>Prepare model artifacts for serving in Cloud Storage </li>
+   <li>Regularly compute new feature values </li>
+  </ul>
+ <li>Model deployment and serving
+  <ul>
+   <li>Specify the number and types of machines you need </li>
+   <li>Plan inputs to the model </li>
+   <li>Turn on automatic scaling </li>
+  </ul>
+ <li>Machine learning workflow orchestration
+  <ul>
+   <li>Use Vertex AI Pipelines to orchestrate the ML workflow </li>
+   <li>Use Kubeflow Pipelines for flexible pipeline construction </li>
+  </ul>
+ <li>Artifact organization 
+  <ul>
+   <li>Organize your ML model artifacts </li>
+   <li>Use a source control repository for pipeline definitions and training code</li>
+  </ul>
+ <li>Model monitoring
+  <ul>
+   <li>Use skew and drift detection </li>
+   <li>Fine tune alert thresholds </li>
+   <li>Use feature attributions to detect data drift or skew</li>
+  </ul>
 </ul>
 
 
