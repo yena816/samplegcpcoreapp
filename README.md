@@ -114,15 +114,13 @@
   <th>Service</th>
  </tr>
  <tr>
-  <td>Generative AI</td>
+  <td rowspan="3">Generative AI</td>
   <td>Generative AI on Vertex AI</td>
  </tr>
  <tr>
-  <td>Generative AI</td>
   <td>Vertex AI Search and Conversation</td>
  </tr>
  <tr>
-  <td>Generative AI</td>
   <td>Generative AI Document Summarization</td>
  </tr>
  <tr>
@@ -140,6 +138,18 @@
  <tr>
   <td>Speech, text, and language APIs</td>
   <td>Natural Language AI</td>
+ </tr>
+ <tr>
+  <td>Speech, text, and language APIs</td>
+  <td>Speech-to-Text</td>
+ </tr>
+ <tr>
+  <td>Speech, text, and language APIs</td>
+  <td>Text-to-Speech</td>
+ </tr>
+ <tr>
+  <td>Speech, text, and language APIs</td>
+  <td>Translation AI</td>
  </tr>
 </table>
 
