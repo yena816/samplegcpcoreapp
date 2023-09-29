@@ -246,6 +246,29 @@
 
 <h2>Looker</h2>
 
+<p>Looker is a unified business intelligence platform that allows you to self-service or governed BI, build your own custom applications with trusted metrics, or even bring Looker modeling to your existing BI environment. Looker is used for organizational business intelligence, embedded analytics and applications, and data modeling to unify business metrics. GCP also offers Looker Studio and Looker Studio Pro with more advanced self-service business intelligence features. </p>
+
+<h3>Looker Best Practices</h3>
+
+<p>The following are best practices for Looker: </p>
+
+<ul>
+ <li>Secure your folders</li>
+ <li>Configure secure access between the Looker application and your database</li>
+ <li>Set up the most locked-down database account permissions for Looker that will still allow the application to perform all needed functions</li>
+ <li>Set up user authentication, either using Looker's native username/password option or, preferably, using a more robust authentication mechanism like 2FA, LDAP, Google OAuth, or SAML</li>
+ <li>Never post API credentials publicly</li>
+ <li>Regularly audit any public access links your users create, and restrict the permission to create them as necessary</li>
+ <li>Set up the most restrictive user permissions and content access that still allow users to carry out their work, paying special attention to who has admin privileges</li>
+ <li>Use the access_filter parameter, in conjunction with user attributes, for applying row-level data security by user or user group </li>
+ <li>Leverage access_grants, in conjunction with user attributes, to control access to LookML structures such as Explores, joins, views, and fields by user or group </li>
+ <li>Use model sets to apply data set security within the Looker model </li>
+ <li>Avoid assigning users to roles individually whenever possible </li>
+ <li>Most users should be Viewers of the Shared folder (except in closed system setups)</li>
+ <li>Implement the appropriate type of Looker system based on the access controls you need to support (completely open, open with content restrictions, or closed system)</li>
+</ul>
+
+
 
 <h1>Process</h1>
 <h2>Visual Studio</h2>
