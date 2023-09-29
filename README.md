@@ -184,9 +184,9 @@
 <ul>
  <li>Use recommended tools and products</li>
  <li>Machine learning environment setup 
-  <ol>
+  <ul>
    <li>Use Vertex AI Workbench notebooks for experimentation and development</li>
-  </ol>
+  </ul>
  <li>Create a notebook instance for each team member </li>
  <li>Store your ML resources and artifacts based on your corporate policy </li>
  <li>Use Vertex AI SDK for Python </li>
