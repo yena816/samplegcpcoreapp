@@ -124,32 +124,56 @@
   <td>Generative AI Document Summarization</td>
  </tr>
  <tr>
-  <td>Machine learning and MLOPs</td>
+  <td rowspan="3">Machine learning and MLOPs</td>
   <td>Vertex AI Platform</td>
  </tr>
  <tr>
-  <td>Machine learning and MLOPs</td>
   <td>Vertex AI Notebooks</td>
  </tr>
  <tr>
-  <td>Machine learning and MLOPs</td>
   <td>AutoML</td>
  </tr>
  <tr>
-  <td>Speech, text, and language APIs</td>
+  <td rowspan="4">Speech, text, and language APIs</td>
   <td>Natural Language AI</td>
  </tr>
  <tr>
-  <td>Speech, text, and language APIs</td>
   <td>Speech-to-Text</td>
  </tr>
  <tr>
-  <td>Speech, text, and language APIs</td>
   <td>Text-to-Speech</td>
  </tr>
  <tr>
-  <td>Speech, text, and language APIs</td>
   <td>Translation AI</td>
+ </tr>
+ <tr>
+  <td rowspan="2">Image and video APIs</td>
+  <td>Vision AI</td>
+ </tr>
+ <tr>
+  <td>Video AI</td>
+ </tr>
+ <tr>
+  <td>Document and data APIs</td>
+  <td>Document AI</td>
+ </tr>
+ <tr>
+  <td rowspan="3">AI assistance and conversational AI</td>
+  <td>Dialogflow</td>
+ </tr>
+ <tr>
+  <td>Contact Center AI</td>
+ </tr>
+ <tr>
+  <td>Duet AI for Google Cloud</td>
+ </tr>
+ <tr>
+  <td>AI Infrastructure</td>
+  <td>TPUs, GPUs, and CPUs</td>
+ </tr>
+ <tr>
+  <td>Consulting service</td>
+  <td>AI Readiness Program</td>
  </tr>
 </table>
 
