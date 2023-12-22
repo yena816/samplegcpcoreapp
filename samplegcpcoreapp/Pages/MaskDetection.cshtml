@@ -1,0 +1,52 @@
+﻿@page
+@model samplegcpcoreapp.Pages.MaskDetectionModel
+@{
+}
+
+@if (Model.hasData)
+{
+    <p>Hello @Model.datasetname</p>
+    <img src="@Model.imagePath"
+         asp-append-version="true" />
+}
+
+<div class="container">
+    <form method="post">
+        <!--
+            <div class="form-group">
+            <label asp-for="newImage" class="control-label"></label>
+            <div class="custom-file">
+                <input asp-for="newImage" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <span asp-validation-for="newImage" class="text-danger"></span>
+        </div>
+        -->
+
+        <fieldset>
+      <legend> Upload Image </legend>
+      <label for="Image">Image</label>
+      <input type="file" name="Image" />
+      <br/>
+      <input type="submit" value="Upload" />
+    </fieldset>
+        
+        <div class="form-group">
+            <input type="submit" value="Run Model" class="btn btn-sm btn-primary rounded-0 text-uppercase" />
+        </div>
+
+    </form>
+</div>
+
+<!--
+@section scripts{
+        <script type="text/javascript">
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+        </script>
+}
+-->
+
